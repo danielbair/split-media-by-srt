@@ -1,0 +1,33 @@
+{
+  "name": "split-media-by-srt",
+  "version": "1.0.0",
+  "description": "Split an audio or video file by using a srt timing file.",
+  "main": "split-media-by-srt.js",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.3",
+    "subtitles-parser": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielbair/split-media-by-srt.git"
+  },
+  "keywords": [
+    "ffmpeg",
+    "split",
+    "media",
+    "audio",
+    "video",
+    "srt"
+  ],
+  "author": "Daniel Bair",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/danielbair/split-media-by-srt/issues"
+  },
+  "homepage": "https://github.com/danielbair/split-media-by-srt#readme"
+}
