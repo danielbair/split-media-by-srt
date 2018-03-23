@@ -2,8 +2,7 @@
 Split an audio or video file by using a srt timing file.
 
 # Installation
-git clone https://github.com/danielbair/split-media-by-srt.git && cd split-media-by-srt
-npm install
+git clone https://github.com/danielbair/split-media-by-srt.git && cd split-media-by-srt && npm install
 
 # Usage
 split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3 
