@@ -2,10 +2,14 @@
 Split an audio or video file by using a srt timing file.
 
 # Installation
+```bash
 git clone https://github.com/danielbair/split-media-by-srt.git && cd split-media-by-srt && npm install
+```  
 
 # Usage
-split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3 
+```bash
+split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3
+```  
                                                                                 
 Note: This script will only copy the source media codec's content and will not convert to another codec.                                                 
 
