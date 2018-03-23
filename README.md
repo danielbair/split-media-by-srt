@@ -10,6 +10,7 @@ split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3
 Note: This script will only copy the source media codec's content and will not convert to another codec.                                                 
 
 # Options
+| --- | --- | --- |
 | -v, | --verbose       | Display verbose output  |
 | -d, | --debug         | Display debug information  |
 | -h, | --help          | Display this usage guide  |
