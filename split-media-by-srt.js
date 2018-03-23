@@ -23,7 +23,7 @@ const optionDefinitions = [
 	},
 	{
 		name: 'file',
-		alias: 'f',
+		alias: 'i',
 		description: 'The input media file to process (required)',
 		typeLabel: '<file>',
 		type: String
@@ -44,7 +44,7 @@ const optionDefinitions = [
 	},
 	{
 		name: 'fmt',
-		alias: 'e',
+		alias: 'f',
 		description: 'The output format to save the segments (optional)',
 		typeLabel: '<format>',
 		type: String
@@ -54,12 +54,12 @@ const optionDefinitions = [
 const commandLineArgs = require('command-line-args');
 const options = commandLineArgs(optionDefinitions);
 
-if ( options.help == true ) {
+function displayHelp () {
 	const commandLineUsage = require('command-line-usage');
 	const usage = commandLineUsage([
 		{
 			header: 'Usage',
-			content: 'split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3\n\nNote: This script will only copy the source media codec`s content and will not convert to another codec.'
+			content: 'split-media-by-srt.js -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3\n\nNote: This script will only copy the source media codec`s content and will not convert it to another codec.'
 		},
 		{
 			header: 'Options',
@@ -70,9 +70,18 @@ if ( options.help == true ) {
 		}
 	])
 	console.log(usage)
+}
+
+if ( options.help == true ) {
+	displayHelp();
 }else{
 	if ( options.debug == true ) {
 		console.log(options);
+	}
+
+	if ( !options.file || !options.srt || !options.dir ) {
+		displayHelp();
+		process.exit(1);
 	}
 
 	var parser = require('subtitles-parser');
@@ -100,16 +109,16 @@ if ( options.help == true ) {
 			if ( options.debug == true ) {
 				console.log(sub);
 			}
-			var fileExt = path.extname(options.media);
+			var fileExt = path.extname(options.file);
 			if ( options.fmt ) {
-				var fileExt = "."+options.ext;
+				var fileExt = "."+options.fmt;
 			}
-			var newFile = path.basename(options.media,path.extname(options.media))+"-"+sub.id+fileExt;
-			splitCmd = 'ffmpeg -i "'+options.media+'" -acodec copy -ss '+sub.startTime.replace(",",".")+' -to '+sub.endTime.replace(",",".")+' -y "'+options.dir+newFile+'"';
+			var newFile = path.basename(options.file,path.extname(options.file))+"-"+sub.id+fileExt;
+			var splitCmd = 'ffmpeg -i "'+options.file+'" -acodec copy -ss '+sub.startTime.replace(",",".")+' -to '+sub.endTime.replace(",",".")+' -y "'+options.dir+newFile+'"';
 			if ( options.debug == true ) {
 				console.log(splitCmd);
 			}
-			results = execSync(splitCmd).toString();
+			var results = execSync(splitCmd).toString();
 			if ( options.verbose == true ) {
 				console.log(results);
 			}

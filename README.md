@@ -8,7 +8,7 @@ git clone https://github.com/danielbair/split-media-by-srt.git && cd split-media
 
 # Example
 ```bash
-split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3
+node split-media-by-srt.js -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3
 ```  
                                                                                 
 Note: This script will only copy the source media codec's content and will not convert to another codec.                                                 
@@ -19,8 +19,8 @@ Note: This script will only copy the source media codec's content and will not c
 | -v, | --verbose | Display verbose output |
 | -d, | --debug | Display debug information |
 | -h, | --help | Display this usage guide |
-| -f, | --file <file> | The input media file to process (required) |
+| -i, | --file <file> | The input media file to process (required) |
 | -s, | --srt <file> | The input srt file to process segments (required) |
 | -o, | --dir <folder> | The output directory to save the segments (required) |
-| -e, | --fmt <format> | The output format to save the segments (optional) |
+| -f, | --fmt <format> | The output format to save the segments (optional) [Default: same as source media] |
 
