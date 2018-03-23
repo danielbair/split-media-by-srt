@@ -2,7 +2,7 @@
 Split an audio or video file by using a srt timing file.
 
 # Requirements
-[NodeJS](https://nodejs.org/en/)
+[NodeJS](https://nodejs.org/en/)  
 [FFmpeg](https://www.ffmpeg.org/download.html)
 
 # Installation
