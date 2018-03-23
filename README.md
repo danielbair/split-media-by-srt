@@ -1,9 +1,15 @@
 # Description
 Split an audio or video file by using a srt timing file.
 
+# Requirements
+[NodeJS](https://nodejs.org/en/)
+[FFmpeg](https://www.ffmpeg.org/download.html)
+
 # Installation
+Clone or download this repository.
 ```bash
-git clone https://github.com/danielbair/split-media-by-srt.git && cd split-media-by-srt && npm install
+cd split-media-by-srt  
+npm install
 ```  
 
 # Example
