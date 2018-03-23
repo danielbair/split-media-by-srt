@@ -58,8 +58,8 @@ if ( options.help == true ) {
 	const commandLineUsage = require('command-line-usage');
 	const usage = commandLineUsage([
 		{
-			header: 'Typical Example',
-			content: 'A simple example demonstrating typical usage.\nsplit-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3\n\nNote: This script will only copy the source media codec`s content and will not convert to another codec.'
+			header: 'Usage',
+			content: 'split-media-by-srt.js -m ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -e ac3\n\nNote: This script will only copy the source media codec`s content and will not convert to another codec.'
 		},
 		{
 			header: 'Options',
