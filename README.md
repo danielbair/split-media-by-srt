@@ -17,7 +17,7 @@ npm link
 
 # Example
 ```bash
-split-media-by-srt -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3
+split-media-by-srt -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f aac
 ```  
                                                                                 
 Note: This script will only copy the source media codec's content and will not convert to another codec.                                                 
