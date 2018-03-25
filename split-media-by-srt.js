@@ -59,7 +59,7 @@ function displayHelp () {
 	const usage = commandLineUsage([
 		{
 			header: 'Usage',
-			content: 'split-media-by-srt.js -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3\n\nNote: This script will only copy the source media codec`s content and will not convert it to another codec.'
+			content: 'split-media-by-srt.js -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f aac\n\nNote: This script will only copy the source media codec`s content and will not convert it to another codec.'
 		},
 		{
 			header: 'Options',
