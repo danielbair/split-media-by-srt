@@ -4,17 +4,20 @@ Split an audio or video file by using a srt timing file.
 # Requirements
 [NodeJS](https://nodejs.org/en/)  
 [FFmpeg](https://www.ffmpeg.org/download.html)
+You will need to have ffmpeg available in your system path. The easiest way to do this is to install the [aeneas tools installer](https://github.com/sillsdev/aeneas-installer/releases) which includes ffmpeg.
 
 # Installation
-Clone or download this repository.
+Clone or download this repository.  
+Then in a terminal do the following.
 ```bash
 cd split-media-by-srt  
 npm install
+npm link
 ```  
 
 # Example
 ```bash
-node split-media-by-srt.js -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3
+split-media-by-srt -i ~/MyVideo.m4v -s ~/MyVideo.srt -o ~/Segments/ -f ac3
 ```  
                                                                                 
 Note: This script will only copy the source media codec's content and will not convert to another codec.                                                 
