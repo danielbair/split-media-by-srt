@@ -101,11 +101,12 @@ if ( options.help == true ) {
 		}
 
 		const execSync = require('child_process').execSync;
+		var total = Object.keys(jsonSubs).length
 		jsonSubs.forEach(function (sub) {
 			/*
 			 * ffmpeg -i BIG_FILE -acodec copy -ss START_TIME -to END_TIME LITTLE_FILE
 			 */
-			console.log("Processing segment: "+sub.id);
+			console.log("Processing segment: "+sub.id+" of "+total);
 			if ( options.debug == true ) {
 				console.log(sub);
 			}
