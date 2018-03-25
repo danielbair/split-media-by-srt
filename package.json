@@ -2,12 +2,12 @@
   "name": "split-media-by-srt",
   "version": "1.0.0",
   "description": "Split an audio or video file by using a srt timing file.",
-  "main": "split-media-by-srt.js",
+  "main": "split-media-by-srt",
   "engines": {
     "node": ">=4.0.0"
   },
   "bin": {
-    "split-media-by-srt": "./split-media-by-srt.js"
+    "split-media-by-srt": "./split-media-by-srt"
   },
   "dependencies": {
     "command-line-args": "^5.0.2",
